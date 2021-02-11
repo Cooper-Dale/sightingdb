@@ -678,9 +678,9 @@ fn main() {
 fn info(_req: HttpRequest) -> impl Responder {
     let info_data = InfoData {
         implementation: String::from("SightingDB"),
-        version: String::from("0.0.4"),
-        vendor: String::from("Devo"),
-        author: String::from("Sebastien Tricaud"),
+        version: String::from("0.0.5"),
+        vendor: String::from("NCOC"),
+        author: String::from("Cooper"),
     };
     HttpResponse::Ok().json(&info_data)
 }
