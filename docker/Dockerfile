@@ -4,7 +4,7 @@ RUN apt update -q
 RUN apt -qy --no-install-recommends install git apt-transport-https ca-certificates pkg-config openssl libssl-dev jed
 RUN update-ca-certificates
 WORKDIR /opt/
-RUN git clone https://github.com/stricaud/sightingdb.git /opt/sightingdb
+RUN git clone https://github.com/Cooper-Dale/sightingdb.git /opt/sightingdb
 WORKDIR /opt/sightingdb
 RUN cargo build --release
 COPY sightingdb.conf /etc/sightingdb/
