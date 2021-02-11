@@ -13,6 +13,7 @@ WORKDIR /etc/sightingdb/ssl
 COPY ssl-answers /etc/sightingdb/ssl/
 RUN openssl req -new -newkey rsa:2048 -days 365 -nodes -x509 -keyout key.pem -out cert.pem < /etc/sightingdb/ssl/ssl-answers
 WORKDIR /opt/sightingdb/
+RUN mkdir /var/lib/sightingdb/
 RUN mkdir /var/log/sightingdb/
 
 EXPOSE 9999
