@@ -1,4 +1,3 @@
-Dockerfile
 FROM rust:latest
 MAINTAINER Corporation <sebastien@honeynet.org>
 RUN apt update -q
