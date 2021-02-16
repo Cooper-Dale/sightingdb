@@ -1,5 +1,5 @@
 FROM rust:latest
-MAINTAINER Corporation <sebastien@honeynet.org>
+LABEL  Corporation <sebastien@honeynet.org>
 RUN apt update -q
 RUN apt -qy --no-install-recommends install git apt-transport-https ca-certificates pkg-config openssl libssl-dev jed
 RUN update-ca-certificates
