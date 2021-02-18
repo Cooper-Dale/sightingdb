@@ -18,5 +18,8 @@ RUN mkdir /var/log/sightingdb/
 
 EXPOSE 9999
 COPY sightingdb-entrypoint.sh /usr/local/bin/
+#Přidán řádek, který dává práva ke spuštění ...
+RUN ["chmod", "+x", "/usr/local/bin/sightingdb-entrypoint.sh"]
+#Testuji zde chybu, entrypoint.sh nemá oprávnění ke spuštění
 ENTRYPOINT ["/usr/local/bin/sightingdb-entrypoint.sh"]
 
